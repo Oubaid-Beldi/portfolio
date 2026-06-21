@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#111110" rx="24"/>
+
+  <!-- "OB" text -->
+  <text x="64" y="82" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="#C8A96E" text-anchor="middle" letter-spacing="-2">OB</text>
+
+  <!-- Small play triangle integrated as accent -->
+  <polygon points="100,28 100,42 110,35" fill="#C8A96E" opacity="0.9"/>
+</svg>
