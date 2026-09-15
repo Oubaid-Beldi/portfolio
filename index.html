@@ -430,7 +430,7 @@
           </div>
           <!-- Badge: update the number as you publish more reels -->
           <div class="hero-badge" aria-label="Reels published">
-            <div class="badge-num">6</div>
+            <div class="badge-num">20</div>
             <div class="badge-label">Reels<br>published</div>
           </div>
         </div>
@@ -445,7 +445,7 @@
     <div class="stats-bar" role="region" aria-label="Portfolio statistics">
       <div class="stats-inner">
         <div class="stat fade-up"><div class="stat-num">5<span>+</span></div><div class="stat-label">Niches covered</div></div>
-        <div class="stat fade-up"><div class="stat-num">6<span>+</span></div><div class="stat-label">Reels delivered</div></div>
+        <div class="stat fade-up"><div class="stat-num">20<span>+</span></div><div class="stat-label">Reels delivered</div></div>
         <div class="stat fade-up"><div class="stat-num">25<span>s</span></div><div class="stat-label">Avg reel length</div></div>
         <div class="stat fade-up"><div class="stat-num">48<span>h</span></div><div class="stat-label">Turnaround time</div></div>
       </div>
@@ -753,15 +753,18 @@
          title       — card headline
          subtitle    — small text below headline (niche · description)
          niche       — must match a key in niches {} above
-         vimeoId     — the number from your Vimeo URL (e.g. vimeo.com/1234567)
-         isComingSoon — true = placeholder card | false = live Vimeo embed
+         youtubeId   — the 11-character video ID from your YouTube URL
+                       (e.g. youtube.com/shorts/dQw4w9WgXcQ → "dQw4w9WgXcQ")
+         isComingSoon — true = placeholder card | false = live YouTube embed
+                        (shows the real YouTube thumbnail + play button,
+                        plays inline on the page — no download needed)
 
        Example — add a new real reel:
          {
            title: "Gym Highlight Reel",
            subtitle: "Fitness · Coach Brand",
            niche: "fitness",
-           vimeoId: "9999999",
+           youtubeId: "dQw4w9WgXcQ",
            isComingSoon: false
          }
 
@@ -784,56 +787,153 @@
     };
 
     const workData = [
+      /* ── Medical (3) ─────────────────────────────────────── */
       {
-        title: "Personal Brand Reel",
-        subtitle: "Personal Brand · Oubaid Beldi",
-        niche: "personal",
-        vimeoId: "1202610038",
+        title: "Dental Procedure Close-up",
+        subtitle: "Medical · Clinical Clip",
+        niche: "medical",
+        youtubeId: "Ajex5lWo9WA",
         isComingSoon: false
       },
       {
-        title: "Instagram Reel",
-        subtitle: "Medical · Instagram Reel",
+        title: "Patient Before/After Case Study",
+        subtitle: "Medical · Patient Story",
         niche: "medical",
-        vimeoId: "1203266786",
+        youtubeId: "0aG_ulltLNQ",
         isComingSoon: false
+      },
+      {
+        title: "Patient Testimonial Reel",
+        subtitle: "Medical · Before/After",
+        niche: "medical",
+        youtubeId: "3RVoj7TasVY",
+        isComingSoon: false
+      },
 
-      },
+      /* ── Personal Brand (13) ─────────────────────────────── */
       {
-        title: "Reputation Management",
-        subtitle: "Personal Brand · Strategy Reel",
+        title: "Podcast Series — Intro Episode",
+        subtitle: "Personal Brand · Podcast",
         niche: "personal",
-        vimeoId: "1202641510",
+        youtubeId: "E8CE1PQ9Gao",
         isComingSoon: false
       },
       {
-        title: "Minimal Reel — SUCCESS",
-        subtitle: "Personal Brand · Oubaid Beldi",
+        title: "Podcast Series — Episode 6",
+        subtitle: "Personal Brand · Podcast",
         niche: "personal",
-        vimeoId: "1202627292",
+        youtubeId: "-c8V9NTSi4w",
         isComingSoon: false
       },
       {
-        title: "Minimal Reel — CREATIVITY",
-        subtitle: "Personal Brand · Oubaid Beldi",
+        title: "Brand Vlog — Episode 1",
+        subtitle: "Personal Brand · Vlog",
         niche: "personal",
-        vimeoId: "1202641512",
+        youtubeId: "82zcuxHX95Y",
         isComingSoon: false
       },
       {
-        title: "Minimal Reel — Heisenberg",
-        subtitle: "Personal Brand · Oubaid Beldi",
+        title: "Guest Interview Clip 1",
+        subtitle: "Personal Brand · Interview",
         niche: "personal",
-        vimeoId: "1202627249",
+        youtubeId: "R07a0QkF7Iw",
         isComingSoon: false
       },
       {
-        title: "Medical Explainer Reel",
-        subtitle: "Medical · Oubaid Beldi",
-        niche: "medical",
-        vimeoId: "1202627251",
+        title: "Guest Interview Clip 2",
+        subtitle: "Personal Brand · Interview",
+        niche: "personal",
+        youtubeId: "FeNSSJw-pqQ",
         isComingSoon: false
       },
+      {
+        title: "Guest Interview Clip 3",
+        subtitle: "Personal Brand · Interview",
+        niche: "personal",
+        youtubeId: "1bqgKH6ybr4",
+        isComingSoon: false
+      },
+      {
+        title: "Guest Interview Clip 4",
+        subtitle: "Personal Brand · Interview",
+        niche: "personal",
+        youtubeId: "n5vvNxWNb28",
+        isComingSoon: false
+      },
+      {
+        title: "Team Photo Moment",
+        subtitle: "Personal Brand · Behind the Scenes",
+        niche: "personal",
+        youtubeId: "oCHO59M9RyE",
+        isComingSoon: false
+      },
+      {
+        title: "Personal Branding Message",
+        subtitle: "Personal Brand · Talking Head",
+        niche: "personal",
+        youtubeId: "14dU0gK1DjA",
+        isComingSoon: false
+      },
+      {
+        title: "Day-in-the-Life Vlog Clip",
+        subtitle: "Personal Brand · Vlog",
+        niche: "personal",
+        youtubeId: "e4cnwCGQh2Y",
+        isComingSoon: false
+      },
+      {
+        title: "Motivational Quote Clip — Success",
+        subtitle: "Personal Brand · Quote Card",
+        niche: "personal",
+        youtubeId: "aOWBTwDb14M",
+        isComingSoon: false
+      },
+      {
+        title: "Motivational Quote Clip — Creativity",
+        subtitle: "Personal Brand · Quote Card",
+        niche: "personal",
+        youtubeId: "VeUFcIgPxx4",
+        isComingSoon: false
+      },
+      {
+        title: "Motivational Quote Clip — Pop Culture",
+        subtitle: "Personal Brand · Quote Card",
+        niche: "personal",
+        youtubeId: "yX7dvR5L_dU",
+        isComingSoon: false
+      },
+
+      /* ── E-Commerce (4) ──────────────────────────────────── */
+      {
+        title: "Product Demo — Car Accessory 1",
+        subtitle: "E-Commerce · Product Ad",
+        niche: "ecom",
+        youtubeId: "xOvB0G_m2_I",
+        isComingSoon: false
+      },
+      {
+        title: "Product Demo — Car Accessory 2",
+        subtitle: "E-Commerce · Product Ad",
+        niche: "ecom",
+        youtubeId: "4zTO6QfQXOU",
+        isComingSoon: false
+      },
+      {
+        title: "Product Demo — Car Accessory 3",
+        subtitle: "E-Commerce · Product Ad",
+        niche: "ecom",
+        youtubeId: "eTXd_7jlfwg",
+        isComingSoon: false
+      },
+      {
+        title: "Product Demo — Car Accessory 4",
+        subtitle: "E-Commerce · Product Ad",
+        niche: "ecom",
+        youtubeId: "4JghVaMrIXA",
+        isComingSoon: false
+      },
+
+      /* ── Coming soon (no footage yet for these niches) ───── */
       {
         title: "Property Listing Reel",
         subtitle: "Real Estate · In Progress",
@@ -844,12 +944,6 @@
         title: "Fitness Coach Reel",
         subtitle: "Fitness · In Progress",
         niche: "fitness",
-        isComingSoon: true
-      },
-      {
-        title: "Product Promo Reel",
-        subtitle: "E-Commerce · In Progress",
-        niche: "ecom",
         isComingSoon: true
       }
     ];
@@ -888,8 +982,9 @@
           : `<div class="work-item work-item--embed" data-niche="${item.niche}" tabindex="0" aria-label="${item.title}">
                <div class="work-niche-dot ${item.niche}" aria-hidden="true"></div>
                <iframe
-                 src="https://player.vimeo.com/video/${item.vimeoId}?badge=0&autopause=0&title=0&byline=0&portrait=0"
+                 src="https://www.youtube.com/embed/${item.youtubeId}?modestbranding=1&rel=0&playsinline=1"
                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                 allowfullscreen
                  title="${item.title}">
                </iframe>
                <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 40%);pointer-events:none;">
